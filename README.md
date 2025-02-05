@@ -14,10 +14,12 @@
 已转换为OpenAI格式，支持非流与流式请求，支持temperature与topP传参：
 
 ## 获取模型列表
-```curl https:/http://127.0.0.1:7860/v1/models 
+```
+curl https:/http://127.0.0.1:7860/v1/models 
 ```
 ## 聊天请求
-```curl https://http://127.0.0.1:7860/v1/chat/completions \
+```
+curl https://http://127.0.0.1:7860/v1/chat/completions \
 -H "Content-Type: application/json" \
 -H "Authorization: Bearer YOUR_API_KEY" \
 -d '{
@@ -38,10 +40,12 @@
 ## 本地docker部署
 下载文件，然后创建镜像。
 
-```docker build -t youname/partyrock2api .
+```
+docker build -t youname/partyrock2api .
 ```
 docker运行
-```docker run -it -d --name partyrock2api \
+```
+docker run -it -d --name partyrock2api \
   --network=my_custom_network \
   -p 7860:7860 \
   -e API_KEY=your_api_key \
@@ -71,7 +75,8 @@ docker运行
 
 4、抱脸ip可能被封，可能需要反代，才能正常使用
 创建deno账号创建项目，复制如下代码，然后获取url
-```import { serve } from "https://deno.land/std@0.224.0/http/server.ts";
+```
+import { serve } from "https://deno.land/std@0.224.0/http/server.ts";
 
 const PROXY_DOMAIN = "https://partyrock.aws/stream/getCompletion";
 const PORT = 8080;
