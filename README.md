@@ -62,16 +62,16 @@ docker run -it -d --name partyrock2api \
 
 ## 主要变量参数获取方式
 1、打开登录这个网站[partyrock](https://partyrock.aws/)，然后创建一个聊天app.
-![image](https://github.com/user-attachments/assets/6df5667e-9726-4e83-a333-e4bd06e7f0f2)
+![image, 75%](https://github.com/user-attachments/assets/6df5667e-9726-4e83-a333-e4bd06e7f0f2)
 
 2、先打开f12，进入network界面，然后进行对话，完整复制下面的信息，分别为anti-csrftoken-a2z，Referer, Cookie的值，最好对话两次再获取cookie的值，有可能第一次没有验证用的waf cookie，导致后面报错400。
-![image](https://github.com/user-attachments/assets/b6af3cd8-5cea-4488-b804-ae07525c8a0e)
+![image, 75%](https://github.com/user-attachments/assets/b6af3cd8-5cea-4488-b804-ae07525c8a0e)
 
-![image](https://github.com/user-attachments/assets/73323b2d-000d-42de-973b-b8ed0eb7cef5)
+![image, 75%](https://github.com/user-attachments/assets/73323b2d-000d-42de-973b-b8ed0eb7cef5)
 
 3、redis保护需要的token获取方式
 注册账号后创建数据库选择免费计划，然后在这里获取url和认证密钥填入环境变量。
-![image](https://github.com/user-attachments/assets/1c8afafa-ea18-43d0-92ba-0d5b4723e744)
+![image, 75%](https://github.com/user-attachments/assets/1c8afafa-ea18-43d0-92ba-0d5b4723e744)
 
 4、抱脸ip可能被封，可能需要反代，才能正常使用
 创建deno账号创建项目，复制如下代码，然后获取url
@@ -104,9 +104,9 @@ async function handler(req: Request): Promise<Response> {
 }
 serve(handler, { port: PORT });
 ```
-![image](https://github.com/user-attachments/assets/61f9d02d-90b4-4276-8d9b-cfbc932a4387)
+![image, 75%](https://github.com/user-attachments/assets/61f9d02d-90b4-4276-8d9b-cfbc932a4387)
 
-![image](https://github.com/user-attachments/assets/c3aef6cd-2582-4077-ad2b-067d8e7756ca)
+![image, 75%](https://github.com/user-attachments/assets/c3aef6cd-2582-4077-ad2b-067d8e7756ca)
 
 ## 声明
 请勿用于商业用途。
